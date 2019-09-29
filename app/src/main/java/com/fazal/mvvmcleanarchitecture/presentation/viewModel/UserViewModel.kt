@@ -11,7 +11,7 @@ import javax.inject.Inject
  */
 class UserViewModel @Inject constructor(val userRepository: UserRepository) : ViewModel() {
 
-    lateinit var userLiveData : MutableLiveData<User>
+    var userLiveData = MutableLiveData<User>()
 
     fun callData() {
         userLiveData = userRepository.getUsersMutableLiveData()
